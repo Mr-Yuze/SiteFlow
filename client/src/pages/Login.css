@@ -2,14 +2,23 @@
     width: 350px;
     margin: 100px auto;
     padding: 25px;
-    border: 1px solid gray;
+    border: 1px solid rgb(7, 7, 7);
     border-radius: 10px;
+    
+}
+
+.login-container h1 {
+    font-size: 40px;
+    font-weight: bold;
+    color: rgb(23, 100, 216);
 }
 
 .login-container input {
     width: 100%;
     padding: 10px;
     margin: 10px 0;
+    border: 2px solid black;
+    border-radius: 50px ;
 }
 
 .login-container button {
@@ -17,11 +26,21 @@
     padding: 10px;
     cursor: pointer;
 }
+
+
+
+
 #sub {
     background-color: orange;
     color: white;
-    border: none;
+    border: 2px solid black;
     padding: 10px 20px;
-    border-radius: 5px;
+    border-radius: 50px;
     cursor: pointer;
+    transition: 970ms;
+    width: 150px;
+    
+}
+#sub:hover {
+    background-color: rgb(102, 206, 124);
 }
