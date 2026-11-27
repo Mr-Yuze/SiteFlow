@@ -10,12 +10,17 @@ function Register() {
      function onsubmit(data){
         console.log(data)
         alert("registeration successful")
-        navigate("/login")
+        navigate("/login",{
+            state:data
+        })
+     }
+     function move(){
+        navigate("login")
      }
     return ( 
       <>
       <form onSubmit={handleSubmit(onsubmit)}>
-      <input type="text" placeholder="Enter ur name" {...register("name")} />
+      <input type="text" placeholder="Enter ur id" {...register("id")} />
       <p>{errors.name?.message}</p>
       <input type="text" placeholder="Enter ur email" {...register("email")} />
       <p>{errors.email?.message}</p>
@@ -23,7 +28,11 @@ function Register() {
       <p>{errors.password?.message}</p>
       <input type="text" placeholder="Enter ur age" {...register("age")} />
       <p>{errors.age?.message}</p>
+      <input type="text" placeholder="Enter ur roll" {...register("rollno")}/>
+      <p>{errors.rollno?.message}</p>
       <button type="submit">Submit</button>
+      <p>Already Registered try </p>
+      <button onClick={move}>LOGIN</button>
       </form>
       </>  
      );
